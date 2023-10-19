@@ -1,20 +1,23 @@
 package cat.iesesteveterradas.mp06.uf1.exemples;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.File;
+import javax.json.Json;
+import javax.json.JsonObject;
+import javax.json.JsonWriter;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 public class EscripturaJSON {
-    public static void main(String[] args) throws IOException {
-        ObjectMapper objectMapper = new ObjectMapper();
+    public static void main(String[] args) {
+        JsonObject jsonObject = Json.createObjectBuilder()
+                .add("nom", "Joan")
+                .add("edat", 30)
+                .build();
 
-        Map<String, Object> map = new HashMap<>();
-        map.put("nom", "Joan");
-        map.put("edat", 30);
-
-        objectMapper.writeValue(new File("data/json_file_sortida.json"), map);
-        System.out.println("Dades guardades amb èxit!");
+        try (JsonWriter jsonWriter = Json.createWriter(new FileWriter("data/json_file_sortida.json"))) {
+            jsonWriter.writeObject(jsonObject);
+            System.out.println("Dades guardades amb èxit!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

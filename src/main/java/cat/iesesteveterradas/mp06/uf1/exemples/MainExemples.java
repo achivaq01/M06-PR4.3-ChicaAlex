@@ -28,9 +28,11 @@ public class MainExemples {
             menu = menu + "\n 10) Lectura de llistes";
             menu = menu + "\n 11) Gestió CSV";
             menu = menu + "\n 12) Gestió XML";
-            menu = menu + "\n 13) Lectura JSON";
-            menu = menu + "\n 14) Escriptura JSON";
-            menu = menu + "\n 15) Sortir";
+            menu = menu + "\n 13) Lectura JSON (amb Jackson)";
+            menu = menu + "\n 14) Escriptura JSON (amb Jackson)";
+            menu = menu + "\n 15) Lectura JSON (API standard)";
+            menu = menu + "\n 16) Escriptura JSON (API standard)";
+            menu = menu + "\n 17) Sortir";
             System.out.println(menu);
 
             int opcio = Integer.valueOf(llegirLinia("Opció:"));
@@ -50,9 +52,11 @@ public class MainExemples {
                     case 10: LecturaLlistes.main(args);             break;
                     case 11: GestioCSV.main(args);                  break;
                     case 12: GestioXML.main(args);                  break;
-                    case 13: LecturaJSON.main(args);                break;
-                    case 14: EscripturaJSON.main(args);             break;
-                    case 15: running = false;                       break;
+                    case 13: LecturaJSONJackson.main(args);         break;
+                    case 14: EscripturaJSONJackson.main(args);      break;
+                    case 15: LecturaJSON.main(args);         break;
+                    case 16: EscripturaJSON.main(args);      break;
+                    case 17: running = false;                       break;
                     default: break;
                 }
             } catch (Exception e) {

@@ -45,6 +45,10 @@ On:
 * <com.project.Main>: és la classe principal que vols executar.
 * \<param1>, \<param2>, \<param3>: són els paràmetres que necessites passar a la teva aplicació.
 
+Executa el menú d'exemples:
+```bash
+run.ps1 cat.iesesteveterradas.mp06.uf1.exemples.MainExemples
+```
 
 ## Prompts IA ##
 
