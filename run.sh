@@ -20,14 +20,17 @@ shift
 # Construct Maven argument for the main class
 mavenMainClassArg="-Dexec.mainClass=$mainClass"
 
-# Gather all remaining arguments into a string
-javaArgs="$*"
+# Use "$@" to properly handle all arguments intended for the Java program
+javaArgs="$@"
+
+# Join the arguments into a single string with proper escaping
+javaArgsStr=$(printf "%q " "$javaArgs")
 
 # Construct argument for passing additional args to Java program
-execArgsForJava="-Dexec.args='$javaArgs'"
+execArgsForJava="-Dexec.args=\"$javaArgsStr\""
 
 echo "Maven Main Class Argument: $mavenMainClassArg"
-echo "Java Program Arguments: $javaArgs"
+echo "Java Program Arguments: $javaArgsStr"
 
 # Execute mvn command
 mvn clean test-compile

@@ -15,12 +15,17 @@ Write-Host "Main Class: $mainClass"
 # Construct Maven argument for the main class
 $mavenMainClassArg = "-Dexec.mainClass=$mainClass"
 
-# Get the rest of the arguments (excluding the first one for mainClass) and join them into a single string
+# Get the rest of the arguments (excluding the first one for mainClass)
 $javaArgsArray = $args[1..($args.Length - 1)]
+
+# Escape any double quotes in the arguments
+$javaArgsArray = $javaArgsArray -replace '"', '\"'
+
+# Join the arguments with a space, preserving them as separate arguments
 $javaArgsStr = $javaArgsArray -join ' '
 
-# Create a separate argument for exec.args
-$execArgsForJava = "-Dexec.args='$javaArgsStr'"
+# Create the exec.args property, enclosing all arguments in double quotes
+$execArgsForJava = "-Dexec.args=`"$javaArgsStr`""
 
 Write-Host "Maven Main Class Argument: $mavenMainClassArg"
 Write-Host "Java Program Arguments: $javaArgsStr"

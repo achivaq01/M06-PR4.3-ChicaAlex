@@ -34,6 +34,8 @@ public class Agenda {
             String v=(String)this.persones.get(k);
             System.out.println("  "+k+ " : " +v);
         }
+        System.out.println("---");
+        System.out.println("");
     }
 
     public void inserirContactes(String[] contactes) {

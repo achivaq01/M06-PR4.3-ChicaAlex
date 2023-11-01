@@ -1,6 +1,52 @@
 # Exemples DAM2-MP06 #
 
-En aquest projecte hi ha un exemple de Hibernate tipus XML Many To Many
+## Arrencada ràpida ##
+Execució ràpida dels diferents exemples i resolusions de problemes
+
+## Windows ##
+```bash
+.\run.ps1 cat.iesesteveterradas.mp06.uf1.exemples.MainExemples
+
+# For PR11Main class
+.\run.ps1 cat.iesesteveterradas.mp06.uf1.solucions.pr11.PR11Main
+
+# For PR12Main class
+.\run.ps1 cat.iesesteveterradas.mp06.uf1.solucions.pr12.PR12Main
+
+# For PR122cat. Execució directa d'un exercici 
+.\run.ps1 cat.iesesteveterradas.mp06.uf1.solucions.pr12.PR122cat ./data/pr12/numeros.txt
+
+# For PR125cp cat. Execució directa d'un exercici 
+.\run.ps1 cat.iesesteveterradas.mp06.uf1.solucions.pr12.PR125cp "./data/pr12/numeros.txt" "./data/pr12/numeros_copia.txt"
+
+# For PR13Main class
+.\run.ps1 cat.iesesteveterradas.mp06.uf1.solucions.pr13.PR13Main
+
+# For PR14Main class
+.\run.ps1 cat.iesesteveterradas.mp06.uf1.solucions.pr14.PR14Main
+
+```
+
+## Linux ##
+```bash
+run.sh cat.iesesteveterradas.mp06.uf1.exemples.MainExemples
+
+# For PR11Main class
+run.sh cat.iesesteveterradas.mp06.uf1.solucions.pr11.PR11Main
+
+# For PR12Main class
+run.sh cat.iesesteveterradas.mp06.uf1.solucions.pr12.PR12Main
+
+# For PR122cat cat. Execució directa d'un exercici 
+run.sh cat.iesesteveterradas.mp06.uf1.solucions.pr12.PR122cat ./data/Arxiu.txt
+
+# For PR13Main class
+run.sh cat.iesesteveterradas.mp06.uf1.solucions.pr13.PR13Main
+
+# For PR14Main class
+run.sh cat.iesesteveterradas.mp06.uf1.solucions.pr14.PR14Main
+
+```
 
 ## Compilació i funcionament ##
 

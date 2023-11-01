@@ -46,6 +46,8 @@ public class Agenda2 {
             String v = (String) m.get(k);
             System.out.println("  " + k + " : " + v);
         }
+        System.out.println("---");
+        System.out.println("");
     }
 }
 
