@@ -10,7 +10,7 @@ $env:MAVEN_OPTS="--add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.ba
 $mainClass = $args[0]
 
 Write-Host "Setting MAVEN_OPTS to: $env:MAVEN_OPTS"
-Write-Host "Main Class: $mainClass"
+Write-Host "PR143GestioLlibreriaMain Class: $mainClass"
 
 # Construct Maven argument for the main class
 $mavenMainClassArg = "-Dexec.mainClass=$mainClass"
@@ -27,7 +27,7 @@ $javaArgsStr = $javaArgsArray -join ' '
 # Create the exec.args property, enclosing all arguments in double quotes
 $execArgsForJava = "-Dexec.args=`"$javaArgsStr`""
 
-Write-Host "Maven Main Class Argument: $mavenMainClassArg"
+Write-Host "Maven PR143GestioLlibreriaMain Class Argument: $mavenMainClassArg"
 Write-Host "Java Program Arguments: $javaArgsStr"
 
 # Execute the Maven commands

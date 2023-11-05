@@ -54,17 +54,17 @@ run.sh cat.iesesteveterradas.mp06.uf1.solucions.pr14.PR14Main
 
 #### Windows ####
 ```bash
-run.ps1 <com.project.Main> <param1> <param2> <param3>
-run.sh <com.project.Main> <param1> <param2> <param3>
+run.ps1 <com.project.PR143GestioLlibreriaMain> <param1> <param2> <param3>
+run.sh <com.project.PR143GestioLlibreriaMain> <param1> <param2> <param3>
 ```
 #### Linux ####
 ```bash
-run.ps1 <com.project.Main> <param1> <param2> <param3>
-run.sh <com.project.Main> <param1> <param2> <param3>
+run.ps1 <com.project.PR143GestioLlibreriaMain> <param1> <param2> <param3>
+run.sh <com.project.PR143GestioLlibreriaMain> <param1> <param2> <param3>
 ```
 
 On:
-* <com.project.Main>: és la classe principal que vols executar.
+* <com.project.PR143GestioLlibreriaMain>: és la classe principal que vols executar.
 * \<param1>, \<param2>, \<param3>: són els paràmetres que necessites passar a la teva aplicació.
 
 
@@ -84,11 +84,11 @@ mvn compile test
 
 Executa la classe principal:
 ```bash
-mvn exec:java -q -Dexec.mainClass="<com.project.Main>" <param1> <param2> <param3>
+mvn exec:java -q -Dexec.mainClass="<com.project.PR143GestioLlibreriaMain>" <param1> <param2> <param3>
 ```
 
 On:
-* <com.project.Main>: és la classe principal que vols executar.
+* <com.project.PR143GestioLlibreriaMain>: és la classe principal que vols executar.
 * \<param1>, \<param2>, \<param3>: són els paràmetres que necessites passar a la teva aplicació.
 
 Executa el menú d'exemples:
